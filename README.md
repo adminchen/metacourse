@@ -52,6 +52,7 @@
 
 * [jplehmann/coursera](https://github.com/jplehmann/coursera)
 * [bayan/railscast-downloader](https://github.com/bayan/railscast-downloader)
+* [petar / metaTED — Bitbucket](https://bitbucket.org/petar/metated/)
 
 
 ## Author

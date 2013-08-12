@@ -1,0 +1,6 @@
+[submodule "railscast-downloader"]
+	path = railscast-downloader
+	url = https://github.com/bayan/railscast-downloader.git
+[submodule "coursera"]
+	path = coursera
+	url = https://github.com/jplehmann/coursera.git

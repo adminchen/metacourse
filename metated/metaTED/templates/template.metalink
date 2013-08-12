@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metalink version="3.0" xmlns="http://www.metalinker.org/"
+          origin="{{ metalink_url }}" type="dynamic"
+          pubdate="{{ first_published_on }}" refreshdate="{{ refresh_date }}"
+          generator="metaTED {{ metaTED_version }}">
+    <publisher>
+        <name>Petar Marić</name>
+        <url>http://www.petarmaric.com/</url>
+    </publisher>
+    <description>{{ description }}</description>
+    <tags>TED, download, video</tags>
+    <files>
+        {%- for talk in downloadable_talks %}
+        <file name="{% if group_by %}{{ talk[group_by] }}/{% endif %}{{ talk.file_base_name }}.mp4">
+            <resources>
+                <url type="http">http://download.ted.com/talks/{{ talk.media_slug }}{{ quality_slug }}{% if language_code in talk.language_codes %}-{{ language_code }}{% endif %}.mp4?apikey=TEDDOWNLOAD</url>
+            </resources>
+        </file>
+        {%- endfor %}
+    </files>
+</metalink>

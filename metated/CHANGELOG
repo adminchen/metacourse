@@ -1,0 +1,201 @@
+metaTED 2.1.0 (June 19, 2013)
+=============================
+
+Feature additions
+-----------------
+
+    * Fixed #13, #14: Switched to hard subtitled video download URLs, as there
+      have been issues with externally hosted soft subtitles. The 'standard'
+      quality level has unfortunately been removed, as TED doesn't provide hard
+      subtitles for it.
+
+    * Removed `theme` from `talk_info` metadata as TED stopped providing theme
+      information in their HTML.
+
+Bugfixes
+--------
+
+    * Updated author marker as TED updated their HTML layout.
+
+    * Fixed #15: Updated code for finding talk urls as TED added pagination to
+      their talk list page. Reintroduced `talks_urls` caching to improve
+      performance.
+
+metaTED 2.0.4 (October 16, 2012)
+=============================
+
+Bugfixes
+--------
+
+    * Fixed issue #12 - Updated video file extension detection code as TED
+      changed their video download URLs.
+      Thanks to J. D. Stevens and Sam Tygier for the bug report.
+
+metaTED 2.0.3 (October 11, 2012)
+=============================
+
+Bugfixes
+--------
+
+    * Updated supported subtitle language markers as TED updated their HTML
+      layout, improved error handling.
+      Thanks to Sam Tygier for the bug report.
+
+metaTED 2.0.2 (July 23, 2012)
+=============================
+
+Bugfixes
+--------
+
+    * Updated filming year, publishing year, event name markers and the
+      detection code as TED updated their HTML layout.
+
+metaTED 2.0.1 (May 23, 2012)
+===============================
+
+Bugfixes
+--------
+
+    * Blacklisted another talk URL with no downloads.
+
+    * Updated author and video metadata markers as TED updated their HTML
+      layout.
+
+metaTED 2.0.0 (January 17, 2012)
+================================
+
+metaTED 2.0.0 has been in the works for some time. It's the bigest change yet in
+the projects short lived 2.5 year history. Cool stuff has been added, bugs were
+fixed, but the API has seen some backwards incompatible changes as well.
+
+Feature additions
+-----------------
+
+    * Fixed issue #4 - Added talk subtitles support, as per popular request.
+      Major thanks to Randall Mason for the initial implementation.
+
+    * Added parallelism to the crawler, leading to substantial performance
+      improvements.
+
+    * Added filming year, publishing year and event name to talks metadata,
+      which automagically added new possible talk groupings.
+
+    * Added parallelism to the metalink generator, leading to substantial
+      performance improvements.
+
+Bugfixes
+--------
+
+    * Updated talk theme markers as TED updated their HTML layout and improved
+      error handling.
+
+    * Updated video download markers and download URLs detection code as TED
+      updated their HTML layout.
+
+    * Updated author markers and detection code as TED updated their HTML
+      layout.
+
+    * talk_info metadata cache is written to disk as soon as possible to
+      minimize data loss on errors.
+
+    * Removed `setup.cfg` as we no longer need it.
+
+    * Removed the `dreamy-trac` project reference from `LICENSE`.
+
+Internals
+---------
+
+    * Switched from using `setuptools` to `distribute` for packaging.
+
+    * Removed crawler based page caching as it's no longer used nor needed.
+
+    * Switched from `BeautifulSoup` to `lxml` and removed custom crawler code in
+      favor of `lxml.html.parse`.
+
+    * Minimal Python version bumped from 2.4+ to 2.6+.
+
+    * Major refactoring to modernize existing codebase, while improving code
+      style, optimizing performance and getting rid of accumulated technical
+      debt. Existing API has suffered a bit.
+
+metaTED 1.0.9 (August 23, 2011)
+===============================
+
+Bugfixes
+--------
+
+    * Simplified code for finding talk URLs.
+
+metaTED 1.0.8 (July 27, 2011)
+=============================
+
+Bugfixes
+--------
+
+    * Updated video download markers as TED updated their HTML layout and
+      introduced a new video quality level.
+
+metaTED 1.0.7 (July 21, 2011)
+=============================
+
+Bugfixes
+--------
+
+    * Updated author markers as TED updated their HTML layout.
+
+metaTED 1.0.6 (July 3, 2011)
+============================
+
+Bugfixes
+--------
+
+    * Updated author and talk theme markers as TED updated their HTML layout.
+
+metaTED 1.0.5 (March 22, 2010)
+==============================
+
+Bugfixes
+--------
+
+    * Updated talk theme markers as TED updated their HTML layout.
+
+metaTED 1.0.4 (December 17, 2010)
+=================================
+
+Bugfixes
+--------
+
+    * Programmatically blacklisted all talk URLs with externally hosted
+      downloads.
+
+metaTED 1.0.3 (January 16, 2010)
+================================
+
+Bugfixes
+--------
+
+    * Blacklisted 7 more talk URLs with no downloads.
+
+metaTED 1.0.2 (December 30, 2009)
+=================================
+
+Bugfixes
+--------
+
+    * Blacklisted even more talk URLs with no downloads.
+
+metaTED 1.0.1 (December 16, 2009)
+=================================
+
+Bugfixes
+--------
+
+    * Blacklisted a couple of talk URLs as they haven't had any downloads for
+      quite a while.
+
+    * Updated video download markers as TED updated their HTML layout.
+
+metaTED 1.0.0 (May 17, 2009)
+============================
+
+    * Initial release.

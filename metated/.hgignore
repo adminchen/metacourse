@@ -1,0 +1,9 @@
+glob:*.pyc
+glob:dist/
+glob:build/
+glob:metaTED.egg-info/
+glob:*.kpf
+syntax: glob
+.project
+.pydevproject
+.settings/

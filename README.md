@@ -46,7 +46,7 @@
 
 批量更新下载脚本：
 
-git submodule foreach git pull && git pull
+	git submodule foreach git pull && git pull
 
 ## 感谢
 

@@ -42,4 +42,18 @@
 
 * [Download TED talks with Chinese, Simplified subtitles](http://metated.petarmaric.com/download.zh-cn.html)
 
+## 更新
 
+批量更新下载脚本：
+
+git submodule foreach git pull && git pull
+
+## 感谢
+
+* [jplehmann/coursera](https://github.com/jplehmann/coursera)
+* [bayan/railscast-downloader](https://github.com/bayan/railscast-downloader)
+
+
+## Author
+
+* zhiping (<http://yangzhiping.com>)

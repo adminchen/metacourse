@@ -63,7 +63,9 @@
 
 `media-format`一般填写mp4。例子：
 
-	clj railscast-download.clj -rss http://railscasts.com/subscriptions/zSBCAPntpaPtZBxldRBBFQ/episodes.rss -type mp4
+	clj railscast-download.clj -rss http://feeds.feedburner.com/railscasts -type mp4
+	
+该免费网址需要翻墙。
 
 ### 收费课程
 
